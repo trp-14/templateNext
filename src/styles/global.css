@@ -1,0 +1,81 @@
+:root {
+    --primary-color: #5cc5cb;   /* Soft Teal */
+    --accent-color: #f8831c;    /* Bright Orange */
+    --secondary-color: #dbe254; /* Pale Yellow */
+    --text-color: #333333;      /* Dark Gray for text */
+    --background-color: #f0f2f5; /* Light background color */
+    --font-family: 'Arial', sans-serif; /* Clean sans-serif font */
+  
+    --heading-size: 2rem;       /* Heading size for h1 */
+    --subheading-size: 1.5rem;  /* Subheading size for h2 */
+    --text-size: 1rem;          /* Default text size */
+    --card-padding: 20px;       /* Padding for card content */
+  }
+  
+  body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: var(--primary-color);
+  }
+  
+  button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--accent-color);
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 10px;
+    padding: var(--card-padding);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header, .sidebar {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .sidebar {
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+  }
+  
+  .main-content {
+    margin-left: 220px; /* Offset for sidebar */
+    padding: 20px;
+  }
+  

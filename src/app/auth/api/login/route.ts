@@ -1,12 +1,14 @@
+// src/app/auth/api/login/route.ts
+
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
   const data = await request.json();
-  console.log('hit api')
-  
+
   const { username, password } = data;
 
   if (username === 'admin' && password === 'password') {
+    console.log('Login successful');
     const user = {
       userId: '12345',
       username: 'admin',
@@ -14,21 +16,17 @@ export async function POST(request: Request) {
       expiresIn: 3600,
     };
 
-    return NextResponse.json(
-      {
-        success: true,
-        status: 'success',
-        message: 'Login successful',
-        data: user,
-      }
-    );
+    return NextResponse.json({
+      success: true,
+      status: 'success',
+      message: 'Login successful',
+      data: user,
+    });
   } else {
-    return NextResponse.json(
-      { 
-        success: false,
-        status: 'error',
-        message: 'Invalid username or password',
-      }
-    );
+    return NextResponse.json({
+      success: false,
+      status: 'error',
+      message: 'Invalid username or password',
+    });
   }
 }
